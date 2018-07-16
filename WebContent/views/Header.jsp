@@ -4,16 +4,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <script src="${pageContext.request.contextPath}/Public/js/jquery-3.2.1.js"></script>
-        <link rel="stylesheet" href="${pageContext.request.contextPath}/public/css/Style.css"/>
-        
-        
-<title>MES</title>
-<script>
-$(document).ready(function () {
-    var name = "<%=request.getContextPath()%>";
-    $("#p_loginName").html(name.split("/")[1].toUpperCase());
-});
-</script>
+    <meta name='viewport' content='width=device-width' />
+    <style>
+    <%@ include file="/public/css/bootstrap.min.css"%>
+    <%@ include file="/public/css/theme.css"%>
+    </style>
+<title>PMK Password Modify</title>
 </head>
-<body> 
+<body>
