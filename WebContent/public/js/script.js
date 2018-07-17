@@ -12,7 +12,8 @@ function buttonEventHolderLogin()
 function loginEnter()
 {
 	$.ajax({
-	    url:  '/MES/Dashboard_c',
+		type: "POST",
+	    url:  '/Password_Modify/Dashboard_c',
 	    data: {
 	    },
 	    success: function (response) {

@@ -4,7 +4,7 @@ body{
 	background-color: transparent;
 }
 @font-face {
-    font-family: Montserrat;
+    font-family: Mon;
     src: url(public/fonts/Montserrat-Regular.ttf);
 }
 
@@ -49,12 +49,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff796d', end
 }
 label
 {
-	font-family: Montserrat;
 	color: #585252 !important;
 }
 button
 {
 	margin-top: 15px;
-	font-family: Montserrat;
 	font-size: 17px !important;
 }

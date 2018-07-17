@@ -7,6 +7,8 @@
 					<div class="form-group">
  						<label for="text" class="h3">Tartományi felhasználó frissítés</label>
 					</div>
+					
+       				<form id='LR_form' method='post' action='${pageContext.request.contextPath}/Dashboard_c'>
                     <div class="form-group">
  						 <label for="usr">Tartományi felhasználónév:</label>
   						<input type="text" class="form-control h5" id="usr">
@@ -24,6 +26,7 @@
   						<input type="password" class="form-control h5" id="pwd-new2">
 					</div>
 					<button type="button" id="save_btn" class="btn  w-100">Mentés</button>
+					</form>
                 </div>
             </div>
         </div>

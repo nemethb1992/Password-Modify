@@ -11,7 +11,6 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>Dashboard_c</display-name>
     <servlet-name>Dashboard_c</servlet-name>
     <servlet-class>Controllers.Dashboard_c</servlet-class>
   </servlet>

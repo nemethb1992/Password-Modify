@@ -2,12 +2,16 @@ package AD;
 
 import java.io.UnsupportedEncodingException;
 import java.util.Hashtable;
+import java.util.List;
+
 import javax.naming.*;
 import javax.naming.directory.*;
+import Models.test_model_class;
 
 public class Password_Change {
 
-	public String proba()
+
+	public  String proba()
 	{
 		String proba = "Mûködik";
 		return proba;
