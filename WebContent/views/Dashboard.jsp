@@ -3,27 +3,27 @@
         <img class='float-left align-top position-absolute .d-none .d-sm-block' style="height: 100px; margin: 30px;" src='${pageContext.request.contextPath}/public/imgs/pm_logo_mini_white.svg'>
         <div class="container d-flex px-sm-0  h-100">
             <div class="row justify-content-center mx-auto align-self-center w-100">
-                 <div class="col-12 col-sm-12 col-md-8 col-lg-6 p-5 h-50 col-xl-6 blue MyContainer">
+                 <div class="col-12 col-sm-12 col-md-8 col-lg-6 p-4 h-50 col-xl-6 blue MyContainer">
 					<div class="form-group">
- 						<label for="text class="h1"">Tartományi felhasználó frissítés</label>
+ 						<label for="text" class="h3">Tartományi felhasználó frissítés</label>
 					</div>
                     <div class="form-group">
  						 <label for="usr">Tartományi felhasználónév:</label>
-  						<input type="text" class="form-control" id="usr">
+  						<input type="text" class="form-control h5" id="usr">
 					</div>
 					<div class="form-group">
  						<label for="pwd">Régi jelszó:</label>
-  						<input type="password" class="form-control" id="pwd">
+  						<input type="password" class="form-control h5" id="pwd-old">
 					</div>
 					<div class="form-group">
  						<label for="pwd">Új jelszó:</label>
-  						<input type="password" class="form-control" id="pwd">
+  						<input type="password" class="form-control h5" id="pwd-new1">
 					</div>
 					<div class="form-group">
  						<label for="pwd">Új jelszó ismét:</label>
-  						<input type="password" class="form-control" id="pwd">
+  						<input type="password" class="form-control h5" id="pwd-new2">
 					</div>
-					<button type="button" class="btn  w-50">Mentés</button>
+					<button type="button" id="save_btn" class="btn  w-100">Mentés</button>
                 </div>
             </div>
         </div>

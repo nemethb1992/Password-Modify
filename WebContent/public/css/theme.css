@@ -50,9 +50,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff796d', end
 label
 {
 	font-family: Montserrat;
-	color: black;
+	color: #585252 !important;
 }
 button
 {
 	margin-top: 15px;
+	font-family: Montserrat;
+	font-size: 17px !important;
 }

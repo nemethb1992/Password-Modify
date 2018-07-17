@@ -9,6 +9,10 @@
     <%@ include file="/public/css/bootstrap.min.css"%>
     <%@ include file="/public/css/theme.css"%>
     </style>
+    <script>
+    <%@ include file="/public/js/jquery.js"%>
+    <%@ include file="/public/js/script.js"%>
+    </script>
 <title>PMK Password Modify</title>
 </head>
 <body>
