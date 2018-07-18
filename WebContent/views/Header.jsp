@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+    pageEncoding="ISO-8859-1" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,10 +9,11 @@
     <%@ include file="/public/css/bootstrap.min.css"%>
     <%@ include file="/public/css/theme.css"%>
     </style>
-    <script>
+    <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/public/imgs/pm_logo_mini.ico"/>
+    <script charset="ISO-8859-1">
     <%@ include file="/public/js/jquery.js"%>
     <%@ include file="/public/js/script.js"%>
     </script>
-<title>PMK Password Modify</title>
+<title>PM Jelszó Frissítés</title>
 </head>
 <body>

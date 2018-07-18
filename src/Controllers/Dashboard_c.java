@@ -1,8 +1,8 @@
 package Controllers;
 
 import java.io.IOException;
-import java.io.OutputStream;
-import java.io.PrintWriter;
+//import java.io.OutputStream;
+//import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import com.google.gson.Gson;
-
-import Models.test_model_class;
+//import com.google.gson.Gson;
+//
+//import Models.test_model_class;
 
 //import com.google.gson.Gson;
 
@@ -30,7 +30,7 @@ public class Dashboard_c extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     	List<String> CredList = new ArrayList<String>();
-    	String usr ="", pwd_old="", pwd_new1="", pwd_new2="";
+    	String usr ="", pwd_old="", pwd_new1="", pwd_new2="", respond = "Sikertelen Módosítás!";
     	
     usr = request.getParameter("usr");
     pwd_old = request.getParameter("pwd_old");
@@ -42,12 +42,15 @@ public class Dashboard_c extends HttpServlet {
     CredList.add(pwd_new1);
     CredList.add(pwd_new2);
     
-	response.setContentType("text/plain");
 	
-	response.setContentType("application/json");
-
-	new Gson().toJson(pc.proba(CredList), response.getWriter());
-//	response.getWriter().write(pc.proba(CredList));
+//	response.setContentType("application/json");
+//	new Gson().toJson(pc.proba(CredList), response.getWriter());
+    if(pc.PassChange(CredList))
+    {
+    	respond = "Sikeres Módosítás!";
+    }
+	response.setContentType("text/plain");
+	response.getWriter().write(respond);
 	}
 
 }

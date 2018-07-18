@@ -5,7 +5,7 @@
             <div class="row justify-content-center mx-auto align-self-center w-100">
                  <div class="col-12 col-sm-12 col-md-8 col-lg-6 p-4 h-50 col-xl-6 blue MyContainer">
 					<div class="form-group">
- 						<label for="text" class="h3">Tartományi felhasználó frissítés</label>
+ 						<label for="text" id="HeaderLabel" class="  h3 mb-2">Tartományi jelszó frissítés</label>
 					</div>
 					
        				<form id='LR_form' method='post' action='${pageContext.request.contextPath}/Dashboard_c'>
@@ -25,7 +25,8 @@
  						<label for="pwd">Új jelszó ismét:</label>
   						<input type="password" class="form-control h5" id="pwd-new2">
 					</div>
-					<button type="button" id="save_btn" class="btn  w-100">Mentés</button>
+					<button type="button" id="save_btn" class="btn btn-dark w-50">Mentés</button>
+					<Label id="info_label" class="float-right text-center pt-0 pt-sm-3 w-50"></Label>
 					</form>
                 </div>
             </div>

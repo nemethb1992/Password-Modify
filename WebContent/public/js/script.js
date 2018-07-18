@@ -12,6 +12,7 @@ function buttonEventHolderLogin()
 function loginEnter()
 {
 	var list = [];
+	$("#info_label").text("Módosítás folyamatban");
 	list.push($("#usr").val());
 	list.push($("#pwd-old").val());
 	list.push($("#pwd-new1").val());
@@ -26,12 +27,15 @@ function loginEnter()
             pwd_new2: list[3]
         },
 	    success: function (response) {
-	    	var lista = response;
-            $.each(lista, function(i, item) {
-                $('<option value='+ lista[i] +'>'+lista[i]).html('</options>').appendTo('#roll-name');
-            });
-	    		  console.log(response);
-	    	
+	    	  $('#usr').val('');
+	    	$("#pwd-old").val('');
+	    	$("#pwd-new1").val('');
+	    	$("#pwd-new2").val('');
+//	    	var lista = response;
+//            $.each(lista, function(i, item) {
+//                $('<option value='+ lista[i] +'>'+lista[i]).html('</options>').appendTo('#roll-name');
+//            });
+	    	$("#info_label").text(response);
 	    }
 	});
 }
