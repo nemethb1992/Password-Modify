@@ -1,6 +1,7 @@
 package AD;
 
 import java.io.UnsupportedEncodingException;
+import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.List;
 
@@ -16,8 +17,9 @@ public class Password_Change {
 		list.add("Helló a szerverrõl");
 		return list;
 	}
-    public static void main(String[] args) {
+    public boolean PassChange (List<String> list) {
    	 
+    	boolean valid = false;
         Hashtable<String, String> env = new Hashtable<String, String>();   
        String adminName = "admin";   
        String adminPassword = "pass";   
@@ -113,6 +115,6 @@ public class Password_Change {
        } catch (UnsupportedEncodingException e) {
            System.out.println("Problem encoding password: " + e);
        }
-
+       return valid;
    }
 }

@@ -36,6 +36,7 @@ public class Dashboard_c extends HttpServlet {
     pwd_old = request.getParameter("pwd_old");
     pwd_new1 = request.getParameter("pwd_new1");
     pwd_new2 = request.getParameter("pwd_new2");
+    
     CredList.add(usr);
     CredList.add(pwd_old);
     CredList.add(pwd_new1);
