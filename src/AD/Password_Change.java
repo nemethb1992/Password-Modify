@@ -11,10 +11,10 @@ import Models.test_model_class;
 public class Password_Change {
 
 
-	public  String proba()
+	public  List<String> proba(List<String> list)
 	{
-		String proba = "Mûködik";
-		return proba;
+		list.add("Helló a szerverrõl");
+		return list;
 	}
     public static void main(String[] args) {
    	 
