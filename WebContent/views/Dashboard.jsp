@@ -11,19 +11,19 @@
        				<form id='LR_form' method='post' action='${pageContext.request.contextPath}/Dashboard_c'>
                     <div class="form-group">
  						 <label for="usr">Tartományi felhasználónév:</label>
-  						<input type="text" class="form-control h5" id="usr">
+  						<input type="text" class="form-control h5" value="balazs.nemeth" id="usr">
 					</div>
 					<div class="form-group">
  						<label for="pwd">Régi jelszó:</label>
-  						<input type="password" class="form-control h5" id="pwd-old">
+  						<input type="password" class="form-control h5" value="hxx8ka3HgB8Wy" id="pwd-old">
 					</div>
 					<div class="form-group">
  						<label for="pwd">Új jelszó:</label>
-  						<input type="password" class="form-control h5" id="pwd-new1">
+  						<input type="password" class="form-control h5" value="Testjelszo1992"  id="pwd-new1">
 					</div>
 					<div class="form-group">
  						<label for="pwd">Új jelszó ismét:</label>
-  						<input type="password" class="form-control h5" id="pwd-new2">
+  						<input type="password" class="form-control h5" value="Testjelszo1992"  id="pwd-new2">
 					</div>
 					<button type="button" id="save_btn" class="btn btn-dark w-50">Mentés</button>
 					<Label id="info_label" class="float-right text-center pt-0 pt-sm-3 w-50"></Label>
