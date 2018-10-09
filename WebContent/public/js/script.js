@@ -19,7 +19,7 @@ function loginEnter()
 	list.push($("#pwd-new2").val());
 	$.ajax({
 		type: "POST",
-	    url:  '/Password_Modify/Dashboard_c',
+	    url:  '/PMpassword/Change',
         data: {
         	usr: list[0],
             pwd_old: list[1],

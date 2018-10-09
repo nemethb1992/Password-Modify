@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
-  <display-name>Password_Modify</display-name>
+  <display-name>PMpassword</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -11,11 +11,11 @@
   </welcome-file-list>
   <servlet>
     <description></description>
-    <servlet-name>Dashboard_c</servlet-name>
-    <servlet-class>Controllers.Dashboard_c</servlet-class>
+    <servlet-name>Change</servlet-name>
+    <servlet-class>phoenix.pmpassword.controller.Change</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>Dashboard_c</servlet-name>
-    <url-pattern>/Dashboard_c</url-pattern>
+    <servlet-name>Change</servlet-name>
+    <url-pattern>/Change</url-pattern>
   </servlet-mapping>
 </web-app>
