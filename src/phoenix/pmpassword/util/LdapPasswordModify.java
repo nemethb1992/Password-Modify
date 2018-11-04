@@ -22,31 +22,7 @@ public class LdapPasswordModify {
 	    return string.getBytes(UTF8_CHARSET);
 	}
 	
-	public boolean Authentication(String name, String pass)
-	{
-		boolean valid = false;
-
-      Hashtable<String, String> env = new Hashtable<>(11);
-      env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
-    env.put(Context.PROVIDER_URL, "ldap://192.168.144.21:389");
-    env.put(Context.SECURITY_AUTHENTICATION, "simple");
-    env.put(Context.SECURITY_PRINCIPAL, name + "@pmhu.local");
-    env.put(Context.SECURITY_CREDENTIALS, pass);
-    
-      try {
-          if (!"".equals(name) && !"".equals(pass)) {
-        	  DirContext ctx = new InitialDirContext(env);
-              valid = true;
-              ctx.close();
-          }
-
-      } catch (NamingException e) {
-    	  valid = false;
-      }
-		
-		return valid;
-	}
-
+	
 	
 	public boolean updateUserPassword(String username, String password, String newPasswordParam)
 	{
@@ -231,67 +207,67 @@ public class LdapPasswordModify {
 //      return changeValid;
 //   }
 	
-    public boolean PassChange (List<String> list) {
-      	 
-    	boolean preValid = false;
-    	boolean changeValid = false;
-
-      Hashtable<String, String> env = new Hashtable<>(11);
-        String ldapURL = "ldap://192.168.144.21:389/dc=pmhu,dc=local";
-        String adminName = list.get(0) + "@pmhu.local";
-        String adminPassword = list.get(1);
-        String userName = "CN="+list.get(0)+",DC=portal,DC=pmhu,DC=local";
-        String newPassword = list.get(2);
+//    public boolean PassChange (List<String> list) {
+//      	 
+//    	boolean preValid = false;
+//    	boolean changeValid = false;
+//
+//      Hashtable<String, String> env = new Hashtable<>(11);
+//        String ldapURL = "ldap://192.168.144.21:389/dc=pmhu,dc=local";
+//        String adminName = list.get(0) + "@pmhu.local";
+//        String adminPassword = list.get(1);
+//        String userName = "CN="+list.get(0)+",DC=portal,DC=pmhu,DC=local";
+//        String newPassword = list.get(2);
         
         //Access the keystore, this is where the Root CA public key cert was installed
         //Could also do this via command line java -Djavax.net.ssl.trustStore....
 //        String keystore = "/usr/java/jdk1.5.0_01/jre/lib/security/cacerts";
 //        System.setProperty("javax.net.ssl.trustStore",keystore);
 
-        env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
-        env.put(Context.SECURITY_AUTHENTICATION,"simple");
-        env.put(Context.SECURITY_PRINCIPAL,adminName);
-        env.put(Context.SECURITY_CREDENTIALS,adminPassword);
-        env.put(Context.PROVIDER_URL,ldapURL);
+//        env.put(Context.INITIAL_CONTEXT_FACTORY,"com.sun.jndi.ldap.LdapCtxFactory");
+//        env.put(Context.SECURITY_AUTHENTICATION,"simple");
+//        env.put(Context.SECURITY_PRINCIPAL,adminName);
+//        env.put(Context.SECURITY_CREDENTIALS,adminPassword);
+//        env.put(Context.PROVIDER_URL,ldapURL);
 
 //        //specify use of ssl
 //        env.put(Context.SECURITY_PROTOCOL,"ssl");
                   
-        //connect to my domain controller
-      preValid = Authentication(list.get(0),list.get(1));
-      if(preValid)
-      {
-        try {
-
-             // Create the initial directory context
-             LdapContext ctx = new InitialLdapContext(env, null);
-       
-             //set password is a ldap modfy operation
-             ModificationItem[] mods = new ModificationItem[1];
-
-             System.out.println("2. - OK!");
-             String newQuotedPassword = "\"" + newPassword + "\"";
-             byte[] newUnicodePassword = newQuotedPassword.getBytes("UTF-16LE");
-
-             mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, new BasicAttribute("unicodePwd", newUnicodePassword));
-
-             System.out.println("3. - OK!");
-             // Perform the update
-             ctx.modifyAttributes(userName, mods);
-
-             System.out.println("4. - OK!");
-           changeValid = true;
-             System.out.println("Reset Password for: " + userName);     
-             ctx.close();
-
-        } 
-        catch (NamingException e) {
-             System.out.println("Problem resetting password: " + e);
-        }
-        catch (UnsupportedEncodingException e) {
-             System.out.println("Problem encoding password: " + e);
-        }
-      }
-      return changeValid;
-   }
+//        //connect to my domain controller
+//      preValid = Authentication(list.get(0),list.get(1));
+//      if(preValid)
+//      {
+//        try {
+//
+//             // Create the initial directory context
+//             LdapContext ctx = new InitialLdapContext(env, null);
+//       
+//             //set password is a ldap modfy operation
+//             ModificationItem[] mods = new ModificationItem[1];
+//
+//             System.out.println("2. - OK!");
+//             String newQuotedPassword = "\"" + newPassword + "\"";
+//             byte[] newUnicodePassword = newQuotedPassword.getBytes("UTF-16LE");
+//
+//             mods[0] = new ModificationItem(DirContext.REPLACE_ATTRIBUTE, new BasicAttribute("unicodePwd", newUnicodePassword));
+//
+//             System.out.println("3. - OK!");
+//             // Perform the update
+//             ctx.modifyAttributes(userName, mods);
+//
+//             System.out.println("4. - OK!");
+//           changeValid = true;
+//             System.out.println("Reset Password for: " + userName);     
+//             ctx.close();
+//
+//        } 
+//        catch (NamingException e) {
+//             System.out.println("Problem resetting password: " + e);
+//        }
+//        catch (UnsupportedEncodingException e) {
+//             System.out.println("Problem encoding password: " + e);
+//        }
+//      }
+//      return changeValid;
+//   }
 }

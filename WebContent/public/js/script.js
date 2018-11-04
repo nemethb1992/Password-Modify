@@ -35,7 +35,8 @@ function loginEnter()
 //            $.each(lista, function(i, item) {
 //                $('<option value='+ lista[i] +'>'+lista[i]).html('</options>').appendTo('#roll-name');
 //            });
-	    	$("#info_label").text(response);
+	    	$("#info_label").text(response.split('--')[0]);
+	    	console.log(response.split('--')[1] + "   state: " +response.split('--')[2]);
 	    }
 	});
 }
